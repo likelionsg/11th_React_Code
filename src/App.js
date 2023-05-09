@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+import { ThemeProvider } from "styled-components";
+import { darkTheme, lightTheme, GlobalStyles } from "./styles";
+
+import { Main, MediaDiv } from "./styledComponent";
+
+import { Routes, Route } from "react-router-dom";
+
+// components
+import Header from "./components/Header";
+import Slogun from "./components/Slogun";
+import Footer from "./components/Footer";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+        <GlobalStyles />
+
+        <MediaDiv>
+          {/* Header */}
+          <Header darkMode={darkMode} setDarkMode={setDarkMode} />
+
+          {/* Main */}
+          <Main>
+            <Slogun />
+
+            {/* Routing */}
+            <Routes>
+              <Route path="/" element={<div>메인 페이지</div>} />
+              <Route path="/write" element={<div>글 작성 페이지</div>} />
+              <Route path="/post/:postID" element={<div>글 상세 페이지</div>} />
+            </Routes>
+          </Main>
+        </MediaDiv>
+      </ThemeProvider>
+      {/* Footer */}
+      <Footer />
+    </>
   );
 }
 
