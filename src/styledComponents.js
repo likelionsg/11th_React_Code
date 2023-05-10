@@ -53,7 +53,7 @@ export const Main = styled.div`
   padding-top: 90px;
 `;
 
-export const SlogunSection = styled.div`
+export const SloganSection = styled.div`
   margin-top: 10px;
   width: 100%;
   display: flex;
@@ -62,12 +62,12 @@ export const SlogunSection = styled.div`
   align-items: center;
 `;
 
-export const SlogunBig = styled.span`
+export const SloganBig = styled.span`
   font-size: 40px;
   font-family: "League Gothic", sans-serif;
 `;
 
-export const SlogunSmall = styled.span`
+export const SloganSmall = styled.span`
   margin: 3px;
   font-weight: bold;
   color: #f39926;

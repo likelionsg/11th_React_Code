@@ -3,16 +3,15 @@ import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme, GlobalStyles } from "./styles";
 
-import { Main, MediaDiv } from "./styledComponent";
-
+import { Main, MediaDiv } from "./styledComponents";
 import { Routes, Route } from "react-router-dom";
 
 // components
 import Header from "./components/Header";
-import Slogun from "./components/Slogun";
+import Slogan from "./components/Slogan";
 import Footer from "./components/Footer";
 
-function App() {
+const App = () => {
   const [darkMode, setDarkMode] = useState(true);
 
   return (
@@ -26,7 +25,7 @@ function App() {
 
           {/* Main */}
           <Main>
-            <Slogun />
+            <Slogan />
 
             {/* Routing */}
             <Routes>
@@ -41,6 +40,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
 export default App;
