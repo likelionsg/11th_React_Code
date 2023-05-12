@@ -11,5 +11,4 @@ const Slogan = () => {
   );
 };
 
-// export default React.memo(Slogan);
-export default Slogan;
+export default React.memo(Slogan);

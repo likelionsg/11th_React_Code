@@ -12,5 +12,4 @@ const HeaderTitle = ({ goHome }) => {
   );
 };
 
-// export default React.memo(HeaderTitle);
-export default HeaderTitle;
+export default React.memo(HeaderTitle);
