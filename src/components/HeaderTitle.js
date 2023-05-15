@@ -1,5 +1,5 @@
 import React from "react";
-import { TitleBig, TitleSmall, TitleLogoDiv } from "../styledComponent";
+import { TitleBig, TitleSmall, TitleLogoDiv } from "../styledComponents";
 
 const HeaderTitle = ({ goHome }) => {
   return (

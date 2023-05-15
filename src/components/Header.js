@@ -1,7 +1,7 @@
 import React from "react";
 
 // styled-components
-import { HeaderDiv, SubHeaderDiv } from "../styledComponent";
+import { HeaderDiv, SubHeaderDiv } from "../styledComponents";
 
 // Fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -24,7 +24,6 @@ const Header = ({ darkMode, setDarkMode }) => {
 
   return (
     <HeaderDiv>
-      {/* React.memo 메모이제이션 */}
       <HeaderTitle goHome={goHome} />
 
       <SubHeaderDiv>

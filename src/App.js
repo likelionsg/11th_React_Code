@@ -11,7 +11,7 @@ import { Main, MediaDiv } from "./styledComponent";
 
 // components
 import Header from "./components/Header";
-import Slogun from "./components/Slogun";
+import Slogan from "./components/Slogan";
 import Footer from "./components/Footer";
 import ShowPostList from "./components/ShowPostList";
 import ShowPost from "./components/ShowPost";
