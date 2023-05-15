@@ -10,16 +10,11 @@ import {
   PostTitle,
   PostTitleDiv,
   PageEmptyDiv,
-} from "../styledComponent";
+} from "../styledComponents";
 
 import loadingIcon from "../loading.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowsRotate,
-  faPenToSquare,
-  faArrowLeft,
-  faArrowRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowsRotate, faPenToSquare, faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 import { useNavigate } from "react-router-dom";
 import EachPost from "./EachPost";

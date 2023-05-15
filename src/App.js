@@ -7,15 +7,15 @@ import { darkTheme, lightTheme, GlobalStyles } from "./styles";
 import { Route, Routes } from "react-router-dom";
 
 // styled-components
-import { Main, MediaDiv } from "./styledComponent";
+import { Main, MediaDiv } from "./styledComponents";
 
 // components
 import Header from "./components/Header";
-import Slogan from "./components/Slogan";
 import Footer from "./components/Footer";
 import ShowPostList from "./components/ShowPostList";
 import ShowPost from "./components/ShowPost";
 import WritePost from "./components/WritePost";
+import Slogan from "./components/Slogan";
 
 export const APIURL = process.env.REACT_APP_APIURL;
 
@@ -35,7 +35,7 @@ const App = () => {
           {/* MAIN */}
           <Main>
             {/* React.memo 메모이제이션 */}
-            <Slogun />
+            <Slogan />
 
             {/* Routing */}
             <Routes>

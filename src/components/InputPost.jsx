@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { ContentsInput, TitleInput } from "../styledComponent";
+import { ContentsInput, TitleInput } from "../styledComponents";
 
 const InputPost = ({ onChange, title, contents }) => {
   const titleInput = useRef(null);
@@ -27,14 +27,7 @@ const InputPost = ({ onChange, title, contents }) => {
         onKeyUp={onKeyUp}
       />
 
-      <ContentsInput
-        name="contents"
-        value={contents}
-        cols="30"
-        rows="10"
-        onChange={onChange}
-        ref={contentsInput}
-      />
+      <ContentsInput name="contents" value={contents} cols="30" rows="10" onChange={onChange} ref={contentsInput} />
     </>
   );
 };

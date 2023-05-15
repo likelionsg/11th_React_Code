@@ -14,7 +14,7 @@ import {
   ReplTitleDiv,
   Replwriter,
   WritereplDiv,
-} from "../styledComponent";
+} from "../styledComponents";
 import loadingIcon from "../loading.svg";
 
 import axios from "axios";
@@ -38,40 +38,38 @@ import { APIURL } from "../App";
 //   ],
 // };
 
-const PostAndRepl = React.memo(
-  ({ post, postLoading, replLoading, repls, replCount }) => {
-    return (
-      <>
-        <PostTitleDiv>
-          <PostTitle>{post && post.title}</PostTitle>
-        </PostTitleDiv>
+const PostAndRepl = React.memo(({ post, postLoading, replLoading, repls, replCount }) => {
+  return (
+    <>
+      <PostTitleDiv>
+        <PostTitle>{post && post.title}</PostTitle>
+      </PostTitleDiv>
 
-        {postLoading ? (
-          <LoadingDiv>
-            <LoadingImg src={loadingIcon} />
-          </LoadingDiv>
-        ) : (
-          <PostReadDiv>{post && post.contents}</PostReadDiv>
-        )}
+      {postLoading ? (
+        <LoadingDiv>
+          <LoadingImg src={loadingIcon} />
+        </LoadingDiv>
+      ) : (
+        <PostReadDiv>{post && post.contents}</PostReadDiv>
+      )}
 
-        <ReplTitleDiv>댓글 {replCount}</ReplTitleDiv>
-        {replLoading ? (
-          <LoadingDiv>
-            <LoadingImg src={loadingIcon} />
-          </LoadingDiv>
-        ) : (
-          repls &&
-          repls.map((repl) => (
-            <PostReplDiv key={repl.id}>
-              <Replwriter>익명</Replwriter>
-              <Repl>{repl.contents}</Repl>
-            </PostReplDiv>
-          ))
-        )}
-      </>
-    );
-  }
-);
+      <ReplTitleDiv>댓글 {replCount}</ReplTitleDiv>
+      {replLoading ? (
+        <LoadingDiv>
+          <LoadingImg src={loadingIcon} />
+        </LoadingDiv>
+      ) : (
+        repls &&
+        repls.map((repl) => (
+          <PostReplDiv key={repl.id}>
+            <Replwriter>익명</Replwriter>
+            <Repl>{repl.contents}</Repl>
+          </PostReplDiv>
+        ))
+      )}
+    </>
+  );
+});
 
 const ShowPost = () => {
   // params

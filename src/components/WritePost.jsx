@@ -2,14 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { APIURL } from "../App";
-import {
-  PostSection,
-  PostSubmit,
-  PostSubmitDiv,
-  PostTitle,
-  PostWriteDiv,
-  PostTitleDiv,
-} from "../styledComponent";
+import { PostSection, PostSubmit, PostSubmitDiv, PostTitle, PostWriteDiv, PostTitleDiv } from "../styledComponents";
 
 import InputPost from "./InputPost";
 
