@@ -3,15 +3,24 @@ import React, { useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme, GlobalStyles } from "./styles";
 
-import { Main, MediaDiv } from "./styledComponents";
-import { Routes, Route } from "react-router-dom";
+// Routing
+import { Route, Routes } from "react-router-dom";
+
+// styled-components
+import { Main, MediaDiv } from "./styledComponent";
 
 // components
 import Header from "./components/Header";
 import Slogan from "./components/Slogan";
 import Footer from "./components/Footer";
+import ShowPostList from "./components/ShowPostList";
+import ShowPost from "./components/ShowPost";
+import WritePost from "./components/WritePost";
+
+export const APIURL = process.env.REACT_APP_APIURL;
 
 const App = () => {
+  // 다크모드
   const [darkMode, setDarkMode] = useState(true);
 
   return (
@@ -23,19 +32,21 @@ const App = () => {
           {/* Header */}
           <Header darkMode={darkMode} setDarkMode={setDarkMode} />
 
-          {/* Main */}
+          {/* MAIN */}
           <Main>
-            <Slogan />
+            {/* React.memo 메모이제이션 */}
+            <Slogun />
 
             {/* Routing */}
             <Routes>
-              <Route path="/" element={<div>메인 페이지</div>} />
-              <Route path="/write" element={<div>글 작성 페이지</div>} />
-              <Route path="/post/:postID" element={<div>글 상세 페이지</div>} />
+              <Route path="/" element={<ShowPostList />} />
+              <Route path="/write" element={<WritePost />} />
+              <Route path="/post/:postID" element={<ShowPost />} />
             </Routes>
           </Main>
         </MediaDiv>
       </ThemeProvider>
+
       {/* Footer */}
       <Footer />
     </>
