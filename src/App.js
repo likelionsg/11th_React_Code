@@ -11,6 +11,10 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Slogun from "./components/Slogun";
 import Footer from "./components/Footer";
+import ShowPostList from "./components/ShowPostList";
+import ShowPost from "./components/ShowPost";
+import WritePost from "./components/WritePost";
+import Ref from "./Ref";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -30,9 +34,11 @@ function App() {
 
             {/* Routing */}
             <Routes>
-              <Route path="/" element={<div>메인 페이지</div>} />
-              <Route path="/write" element={<div>글 작성 페이지</div>} />
-              <Route path="/post/:postID" element={<div>글 상세 페이지</div>} />
+              <Route path="/" element={<ShowPostList />} />
+              <Route path="/write" element={<WritePost />} />
+              <Route path="/post/:postID" element={<ShowPost />} />
+
+              <Route path="/ref" element={<Ref />} />
             </Routes>
           </Main>
         </MediaDiv>
